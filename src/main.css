@@ -7,8 +7,10 @@
   --xsmall-font: 0.50rem;
   --blue: #A6D1E6;
   --purple: #7F5283;
+  --purple-100: #a067a5;
   --white: #FEFBF6;
   --black: #3D3C42;
+  --black-100: #58575f;
   --peach: #FF8080
 }
 
@@ -43,6 +45,16 @@ input {
 input:focus {
   outline: none;
 }
+
+button {
+  margin: 20px;
+  padding: 4px 8px;
+  border: inherit;
+  background-color: inherit;
+  cursor: pointer;
+  color: inherit;
+}
+
 /* 
 .card-size {
   width: 300px;

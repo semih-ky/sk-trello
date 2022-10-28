@@ -1,0 +1,40 @@
+.sk-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: var(--md-font);
+  border-radius: 20px;
+}
+
+.sk-button > span {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px 
+}
+
+.primary-button {
+  color: var(--white);
+  background-color: var(--purple);
+}
+
+.primary-button:hover {
+  background-color: var(--purple-100);
+}
+
+.primary-button:active {
+  background-color: var(--purple);
+}
+
+.secondary-button {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.secondary-button:hover {
+  background-color: var(--black-100);
+}
+
+.secondary-button:active {
+  background-color: var(--black);
+}
