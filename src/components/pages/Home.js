@@ -1,7 +1,8 @@
 import React from 'react'
+import { ListTitle } from '../atoms/ListTitle'
 
 export const Home = () => {
   return (
-    <div>Home</div>
+    <ListTitle title={"To Do"} />
   )
 }
