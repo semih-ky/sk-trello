@@ -1,0 +1,52 @@
+.add-list-wrapper, .add-list-input-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.add-list-wrapper > button {
+  flex: 0 1 max-content;
+}
+
+.add-list-wrapper {
+  margin-right: 4px;
+}
+
+@keyframes widthAnimation {
+  from { width: 0px; }
+  to { width: 250px; }
+}
+
+@keyframes opacityAnimation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.add-list-input-wrapper {
+  padding: 8px;
+  border: 1px solid;
+  border-radius: 20px;
+  min-height: 44px;
+  color: var(--black);
+  border-color: var(--black);
+  margin-left: 4px;
+  animation: widthAnimation 1s;
+  animation-fill-mode: forwards;
+}
+
+.add-list-input-wrapper > input {
+  margin-left: 8px;
+}
+
+.add-list-input-wrapper > button {
+  margin-left: 4px;
+  opacity: 0;
+  animation-name: opacityAnimation;
+  animation-duration: 1s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+.add-list-input-wrapper span {
+  width: 18px;
+  height: 18px;
+}
