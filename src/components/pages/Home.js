@@ -1,8 +1,8 @@
 import React from 'react'
-import { ListTitle } from '../atoms/ListTitle'
+import { CardTitle } from '../atoms/CardTitle'
 
 export const Home = () => {
   return (
-    <ListTitle title={"To Do"} />
+    <CardTitle title={"To Do"} />
   )
 }
