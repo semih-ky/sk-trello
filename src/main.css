@@ -47,7 +47,6 @@ input:focus {
 }
 
 button {
-  margin: 20px;
   padding: 4px 8px;
   border: inherit;
   background-color: inherit;
