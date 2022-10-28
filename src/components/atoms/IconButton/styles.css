@@ -1,0 +1,32 @@
+.sk-icon-button {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 20px;
+}
+
+.primary-icon-button {
+  color: var(--white);
+  background-color: var(--purple);
+}
+
+.primary-icon-button:hover {
+  background-color: var(--purple-100);
+}
+
+.primary-icon-button:active {
+  background-color: var(--purple);
+}
+
+.secondary-icon-button {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.secondary-icon-button:hover {
+  background-color: var(--black-100);
+}
+
+.secondary-icon-button:active {
+  background-color: var(--black);
+}
