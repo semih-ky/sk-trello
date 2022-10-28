@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  margin: 20px;
+}
+
+.header > div:last-child {
+  flex: 1 1 auto;
+}

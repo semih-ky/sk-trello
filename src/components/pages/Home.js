@@ -5,15 +5,11 @@ import { Icon } from '../atoms/Icon'
 import { IconButton } from '../atoms/IconButton'
 import { AddList } from '../molecules/AddList'
 import { SearchInput } from '../molecules/SearchInput'
+import { Header } from '../organisms/Header'
 
 
 export const Home = () => {
   return (
-    <div style={{margin: "20px", display: "flex"}}>
-      <AddList  />
-      <SearchInput />
-      
-
-    </div>
+    <Header />
   )
 }
