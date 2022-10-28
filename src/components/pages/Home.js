@@ -3,12 +3,14 @@ import { addIcon } from '../../icons/addIcon'
 import { Button } from '../atoms/Button'
 import { Icon } from '../atoms/Icon'
 import { IconButton } from '../atoms/IconButton'
+import { SearchInput } from '../atoms/SearchInput'
+
 
 export const Home = () => {
   return (
-    <>
-      <IconButton svg={addIcon} />
+    <div style={{margin: "20px"}}>
+      <SearchInput  />
 
-    </>
+    </div>
   )
 }
