@@ -1,8 +1,8 @@
 import React from 'react'
-import { CardTitle } from '../atoms/CardTitle'
+import { Tag } from '../atoms/Tag'
 
 export const Home = () => {
   return (
-    <CardTitle title={"To Do"} />
+    <Tag />
   )
 }
