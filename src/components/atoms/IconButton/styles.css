@@ -3,6 +3,8 @@
   align-items: center;
   padding: 4px;
   border-radius: 20px;
+  width: inherit;
+  height: inherit;
 }
 
 .primary-icon-button {

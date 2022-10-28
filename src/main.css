@@ -48,7 +48,7 @@ input:focus {
 
 button {
   padding: 4px 8px;
-  border: inherit;
+  border: none;
   background-color: inherit;
   cursor: pointer;
   color: inherit;

@@ -3,9 +3,9 @@ import { Icon } from "../Icon"
 import "./styles.css"
 
 
-export const IconButton = ({ svg, variant="primary" }) => {
+export const IconButton = ({ svg, variant="primary", onClick }) => {
   return (
-    <button className={`sk-icon-button ${variant}-icon-button`}>
+    <button onClick={onClick} className={`sk-icon-button ${variant}-icon-button`}>
       <Icon svg={svg} />
     </button>
   )
@@ -13,5 +13,6 @@ export const IconButton = ({ svg, variant="primary" }) => {
 
 IconButton.propTypes = {
   variant: PropTypes.oneOf(['primary', 'secondary']),
-  svg: PropTypes.node
+  svg: PropTypes.node,
+  onClick: PropTypes.func
 }

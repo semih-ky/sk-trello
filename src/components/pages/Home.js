@@ -3,7 +3,7 @@ import { addIcon } from '../../icons/addIcon'
 import { Button } from '../atoms/Button'
 import { Icon } from '../atoms/Icon'
 import { IconButton } from '../atoms/IconButton'
-import { SearchInput } from '../atoms/SearchInput'
+import { SearchInput } from '../molecules/SearchInput'
 
 
 export const Home = () => {
