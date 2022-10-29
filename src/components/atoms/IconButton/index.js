@@ -12,7 +12,7 @@ export const IconButton = ({ svg, variant="primary", onClick }) => {
 }
 
 IconButton.propTypes = {
-  variant: PropTypes.oneOf(['primary', 'secondary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'delete']),
   svg: PropTypes.node,
   onClick: PropTypes.func
 }

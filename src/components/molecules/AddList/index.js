@@ -23,7 +23,7 @@ export const AddList = () => {
 
   return (
     <div className='add-list-wrapper'>
-      <Button icon={<Icon svg={addIcon} />} onClick={() => toggleIsOpen()}>Add List</Button>
+      <Button icon={<Icon svg={addIcon} />} onClick={() => toggleIsOpen(true)}>Add List</Button>
       {isOpen && (
         <div className='add-list-input-wrapper'>
           <input autoFocus type={"text"} value={value} onChange={changeHandler} />
