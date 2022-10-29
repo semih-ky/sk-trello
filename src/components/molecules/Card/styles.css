@@ -1,0 +1,10 @@
+.card-tag-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.card-tag-wrapper > div {
+  margin-right: 4px;
+  margin-top: 8px;
+}

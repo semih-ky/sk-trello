@@ -1,14 +1,13 @@
 .tag-wrapper {
   padding: 4px 8px; 
-  border: 1px solid;
+  border: 1px solid var(--black-500);
   max-width: max-content;
   border-radius: 20px;
-  margin: 20px
 }
 
 .tag {
   font-size: var(--small-font);
-  color: var(--black);
+  color: var(--black-500);
 }
 
 .tag-red {

@@ -9,10 +9,18 @@
 }
 
 .list-container > h1 {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .add-card-button {
   margin-top: auto;
   max-width: max-content;
+}
+
+.list-container .card-container {
+  margin-bottom: 16px;
+}
+
+.list-container div.card-container:nth-last-child(2) {
+  margin-bottom: 32px;
 }

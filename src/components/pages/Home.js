@@ -21,6 +21,7 @@ export const Home = () => {
         margin: "20px"
       }}>
         <List />
+        
 
       </div>
     </div>
