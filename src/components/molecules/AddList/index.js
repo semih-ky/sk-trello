@@ -26,7 +26,7 @@ export const AddList = () => {
       <Button icon={<Icon svg={addIcon} />} onClick={() => toggleIsOpen()}>Add List</Button>
       {isOpen && (
         <div className='add-list-input-wrapper'>
-          <input type={"text"} value={value} onChange={changeHandler} />
+          <input autoFocus type={"text"} value={value} onChange={changeHandler} />
           <IconButton svg={checkIcon}/>
           <IconButton svg={xmarkIcon} variant={"secondary"} onClick={cancelHandler} />
         </div>

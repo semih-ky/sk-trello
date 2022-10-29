@@ -17,7 +17,7 @@ export const Home = () => {
     }}>
       <Header />
       <div style={{
-        display: "felx",
+        display: "flex",
         margin: "20px"
       }}>
         <List />
