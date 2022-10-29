@@ -1,0 +1,17 @@
+.card-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.card-edit-icon {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  height: 100%;
+  color: black;
+}
