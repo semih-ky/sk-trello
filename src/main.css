@@ -12,7 +12,8 @@
   --black: #3D3C42;
   --black-100: #58575f;
   --black-500: #212125;
-  --peach: #FF8080
+  --peach: #FF8080;
+  --peach-100: #fc9999;
 }
 
 *, *:before, *:after {

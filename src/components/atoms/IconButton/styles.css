@@ -1,6 +1,7 @@
 .sk-icon-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 4px;
   border-radius: 20px;
   width: auto;
@@ -31,4 +32,17 @@
 
 .secondary-icon-button:active {
   background-color: var(--black);
+}
+
+.delete-icon-button {
+  color: var(--white);
+  background-color: var(--peach);
+}
+
+.delete-icon-button:hover {
+  background-color: var(--peach-100);
+}
+
+.delete-icon-button:active {
+  background-color: var(--peach);
 }

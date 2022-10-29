@@ -1,15 +1,15 @@
 import React from 'react';
 import { addIcon } from '../../../icons/addIcon';
 import { Icon } from '../../atoms/Icon';
-import { Button } from '../../atoms/Button';
-import { ListTitle } from "../../atoms/ListTitle";
+import { ListHeader } from '../../molecules/ListHeader';
 import { Card } from '../../molecules/Card';
+import { Button } from '../../atoms/Button';
 import "./styles.css";
 
 export const List = () => {
   return (
     <div className='list-container'>
-      <ListTitle title={"To Do"} />
+      <ListHeader />
 
       <Card />
       <Card />
