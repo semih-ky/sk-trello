@@ -6,10 +6,23 @@ import { IconButton } from '../atoms/IconButton'
 import { AddList } from '../molecules/AddList'
 import { SearchInput } from '../molecules/SearchInput'
 import { Header } from '../organisms/Header'
+import { List } from '../organisms/List'
 
 
 export const Home = () => {
   return (
-    <Header />
+    <div style={{
+      display: "flex",
+      flexDirection: "column"
+    }}>
+      <Header />
+      <div style={{
+        display: "felx",
+        margin: "20px"
+      }}>
+        <List />
+
+      </div>
+    </div>
   )
 }

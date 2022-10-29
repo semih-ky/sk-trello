@@ -1,0 +1,18 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black);
+  border-radius: 20px;
+  padding: 16px;
+  width: 335px;
+  min-height: 200px;
+}
+
+.list-container > h1 {
+  margin-bottom: 8px;
+}
+
+.add-card-button {
+  margin-top: auto;
+  max-width: max-content;
+}
