@@ -4,12 +4,14 @@ import "./styles.css";
 export const CardBody = ({ 
   children, 
   onMouseEnter = () => {}, 
-  onMouseLeave = () => {}
+  onMouseLeave = () => {},
+  onClick = () => {}
 }) => {
 
   return (
     <div 
-      className="card-container" 
+      className="card-container"
+      onClick={onClick}
       onMouseEnter={onMouseEnter} 
       onMouseLeave={onMouseLeave}
     >
@@ -21,5 +23,6 @@ export const CardBody = ({
 CardBody.propTypes = {
   children: PropTypes.node,
   onMouseEnter: PropTypes.func,
-  onMouseLeave: PropTypes.func
+  onMouseLeave: PropTypes.func,
+  onClick: PropTypes.func,
 }

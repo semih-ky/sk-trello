@@ -6,30 +6,34 @@ import { CardTitle } from '../../atoms/CardTitle';
 import { Tag } from '../Tag';
 import { TagTitle } from '../../atoms/TagTitle';
 import "./styles.css";
+import { useTrelloStore } from '../../../store/trelloStore';
 
-export const Card = () => {
+export const Card = ({ card }) => {
 
   const [isHover, toggleIsHover] = useToggle(false);
+  
+  const modalOpen = useTrelloStore((state) => state.modalOpen);
+  const selectCard = useTrelloStore((state) => state.selectCard);
+  const allTags = useTrelloStore((state) => state.tags);
+
+  const getTags = useTrelloStore((state) => state.getTags);
+  const tags = getTags(card?.id);
+
+  const cardClickHandler = () => {
+    selectCard(card);
+    modalOpen();
+  }
 
   return (
-    <CardBody onMouseEnter={toggleIsHover} onMouseLeave={toggleIsHover}>
+    <CardBody onClick={cardClickHandler} onMouseEnter={toggleIsHover} onMouseLeave={toggleIsHover}>
       <CardHover isHover={isHover} />
-      <CardTitle title={"Wellcome to our trello app. Begin your jorney. First, create your first list."} />
+      <CardTitle title={card?.title} />
       <div className='card-tag-wrapper'>
-
-        <Tag colorIndex={0}>
-          <TagTitle title={"new-user"} />
-        </Tag>
-        <Tag colorIndex={1}>
-          <TagTitle title={"panel"} />
-        </Tag>
-        <Tag colorIndex={2}>
-          <TagTitle title={"backend"} />
-        </Tag>
-        <Tag>
-          <TagTitle title={"server"} />
-        </Tag>
-
+        {tags.map(tag => (
+          <Tag key={tag?.id} colorIndex={tag?.colorIndex}>
+            <TagTitle title={tag?.title} />
+          </Tag>
+        ))}
       </div>
     </CardBody>
   )

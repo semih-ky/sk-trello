@@ -13,7 +13,7 @@
   width: max-content;
 }
 
-@keyframes widthAnimation {
+@keyframes heightAnimation {
   from { 
     height: 0;
     padding: 0;
@@ -37,7 +37,7 @@
   color: var(--black);
   border-color: var(--black);
   margin-left: 4px;
-  animation: widthAnimation 1s;
+  animation: heightAnimation 1s;
   animation-fill-mode: forwards;
 }
 
