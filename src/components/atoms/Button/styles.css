@@ -41,3 +41,16 @@
 .secondary-button:active {
   background-color: var(--black);
 }
+
+.delete-button {
+  color: var(--white);
+  background-color: var(--peach);
+}
+
+.delete-button:hover {
+  background-color: var(--peach-100);
+}
+
+.delete-button:active {
+  background-color: var(--peach);
+}

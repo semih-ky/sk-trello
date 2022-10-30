@@ -1,0 +1,26 @@
+.tag-control-buttons {
+  display: flex;
+  margin-left: 4px;
+}
+
+.tag-control-buttons > button {
+  margin-left: 4px;
+}
+
+.tag-control-buttons > button span {
+  width: 14px;
+  height: 14px;
+}
+
+.tag-control-edit {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background-color: var(--white);
+  width: 110%;
+  height: 110%;
+  font-size: var(--small-font);
+  padding:0 2px;
+  overflow: auto;
+  border-radius: 4px;
+}

@@ -1,5 +1,6 @@
 :root {
   font-size: 16px;
+  --modal-zIndex: 10;
   --xlarge-font: 1.5rem;
   --large-font: 1.25rem;
   --md-font: 1rem;

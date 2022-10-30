@@ -1,0 +1,9 @@
+.board {
+  display: flex;
+  overflow: auto;
+  align-items: baseline;
+}
+
+.board > div {
+  margin-right: 16px;
+}

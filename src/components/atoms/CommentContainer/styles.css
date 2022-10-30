@@ -1,0 +1,12 @@
+.modal-body {
+  margin-bottom: 16px;
+}
+
+.comment-container {
+  display: flex;
+  margin: 16px 0;
+}
+
+.comment-container > div:first-child {
+  margin-right: 8px;
+}

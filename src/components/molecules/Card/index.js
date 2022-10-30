@@ -3,7 +3,8 @@ import { useToggle } from '../../../hooks/useToggle';
 import { CardBody } from '../../atoms/CardBody';
 import { CardHover } from '../../atoms/CardHover';
 import { CardTitle } from '../../atoms/CardTitle';
-import { Tag } from '../../atoms/Tag';
+import { Tag } from '../Tag';
+import { TagTitle } from '../../atoms/TagTitle';
 import "./styles.css";
 
 export const Card = () => {
@@ -15,10 +16,20 @@ export const Card = () => {
       <CardHover isHover={isHover} />
       <CardTitle title={"Wellcome to our trello app. Begin your jorney. First, create your first list."} />
       <div className='card-tag-wrapper'>
-        <Tag tagName={"new-user"} colorIndex={0} />
-        <Tag tagName={"panel"} colorIndex={1} />
-        <Tag tagName={"backend"} colorIndex={2} />
-        <Tag tagName={"server"}  />
+
+        <Tag colorIndex={0}>
+          <TagTitle title={"new-user"} />
+        </Tag>
+        <Tag colorIndex={1}>
+          <TagTitle title={"panel"} />
+        </Tag>
+        <Tag colorIndex={2}>
+          <TagTitle title={"backend"} />
+        </Tag>
+        <Tag>
+          <TagTitle title={"server"} />
+        </Tag>
+
       </div>
     </CardBody>
   )

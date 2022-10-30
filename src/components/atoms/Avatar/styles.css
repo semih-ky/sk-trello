@@ -1,0 +1,13 @@
+.avatar {
+  background-color: var(--black-100);
+  padding: 12px;
+  max-width: max-content;
+  border-radius: 50%;
+  color: var(--white);
+  align-self: flex-start;
+}
+
+.avatar > span {
+  width: 14px;
+  height: 14px;
+}

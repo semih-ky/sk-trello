@@ -1,0 +1,43 @@
+.comment-text-container {
+  flex: 1 1 auto;
+}
+
+.comment-text {
+  font-size: var(--small-font);
+  color: var(--black);
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+}
+
+.comment-edit {
+  outline: none;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid var(--black);
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.comment-edit-open {
+  display: block;
+}
+
+.comment-edit-close {
+  display: none;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 16px;
+}
+
+.comment-footer > button span {
+  width: 16px;
+  height: 16px;
+}
+
+.comment-footer > button:last-child {
+  margin-left: 8px;
+}

@@ -12,7 +12,7 @@ export const Button = ({ children, variant="primary", icon, onClick }) => {
 
 Button.propTypes = {
   children: PropTypes.node,
-  variant: PropTypes.oneOf(['primary', 'secondary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'delete']),
   icon: PropTypes.element,
   onClick: PropTypes.func
 }

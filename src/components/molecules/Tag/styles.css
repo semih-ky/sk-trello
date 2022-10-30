@@ -3,11 +3,10 @@
   border: 1px solid var(--black-500);
   max-width: max-content;
   border-radius: 20px;
-}
-
-.tag {
-  font-size: var(--small-font);
+  display: flex;
+  align-items: center;
   color: var(--black-500);
+  position: relative;
 }
 
 .tag-red {
