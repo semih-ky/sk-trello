@@ -4,9 +4,9 @@ import { Icon } from '../../atoms/Icon';
 import { ListHeader } from '../../molecules/ListHeader';
 import { Card } from '../../molecules/Card';
 import { Button } from '../../atoms/Button';
-import "./styles.css";
 import { AddCard } from '../../molecules/AddCard';
 import { useToggle } from '../../../hooks/useToggle';
+import "./styles.css";
 
 export const List = () => {
 
@@ -28,7 +28,7 @@ export const List = () => {
       <div className='add-card-button'>
         <Button icon={<Icon svg={addIcon} />} onClick={() => toggleAddCard(true)}>Add Card</Button>
       </div>
-      
+
     </div>
   )
 }
