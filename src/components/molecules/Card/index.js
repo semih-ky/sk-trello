@@ -25,7 +25,12 @@ export const Card = ({ card }) => {
   }
 
   return (
-    <CardBody onClick={cardClickHandler} onMouseEnter={toggleIsHover} onMouseLeave={toggleIsHover}>
+    <CardBody 
+      card={card} 
+      onClick={cardClickHandler} 
+      onMouseEnter={toggleIsHover} 
+      onMouseLeave={toggleIsHover}
+    >
       <CardHover isHover={isHover} />
       <CardTitle title={card?.title} />
       <div className='card-tag-wrapper'>

@@ -2,11 +2,9 @@ export const initialState = {
   lists: [
     {
       id: "1b0012b7-85fe-4d36-89ac-e0c5b6e5be67",
-      title: "To Do"
     },
     {
       id: "0e3a65b7-93e5-49f3-aa98-1c71dd900b31",
-      title: "Done"
     }
   ],
   listTitles: [

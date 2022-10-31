@@ -11,53 +11,48 @@ export const useTrelloStore = create((set, get) => ({
   isModalOpen: false,
   searchData: null,
 
-  addSearchData: (data) => set({ searchData: data }),
+  moveList: (list, oldTarget, newTarget) => set((state) => {
+    const lists = state.lists;
+    const newTargetList = lists[newTarget]
+    lists.splice(newTarget, 1, list);
+    lists.splice(oldTarget, 1, newTargetList);
 
-  searchCards: (searchValue) => {
-    const regex = new RegExp(searchValue, 'i');
-    const cards = get().cards;
-    const tags = get().tags;
-    const comments = get().comments;
+    return { lists: [...lists] }
+  }),
 
-    const resCards = cards.filter(card => regex.test(card.title));
-    const resTags = tags.filter(tag => regex.test(tag.title));
-    const resComments = comments.filter(comment => regex.test(comment.text));
+  moveCard: (card, target) => set((state) => {
+    const cards = state.cards;
+    const updatedCards = cards.filter(item => item.id !== card.id);
+    card.listId = target;
+    updatedCards.push(card);
+    return { cards: updatedCards }
+  }),
 
-    // const resCardsId = resCards.map(card => card.id);
-    // const resTagsCardsId = resTags.map(tag => tag.cardId);
-    // const resCommentsCardsId = resComments.map(comment => comment.cardId);
+  moveListTitles: (listTitle, target) => set((state) => {
+    const listTitles = state.listTitles;
+    const targetListTitle = listTitles.find(title => title.listId === target);
+    if (listTitle.listId === target) return { listTitles: listTitles };
+    if (!targetListTitle) return { listTitles: listTitles };
 
-    // const allCardId = [...resCardsId, ...resTagsCardsId, ...resCommentsCardsId];
-
-    // const uniqItems = [...new Set(allCardId)]
-
-    // const results = cards.filter(card => uniqItems.includes(card.id))
-
-
-    const allRes = [...resCards, ...resTags, ...resComments];
-    
-    const uniqItems = allRes.filter((item, index) => {
-      if (item?.cardId) {
-        return allRes.findIndex((el) => el?.cardId === item.cardId) === index
-      } else {
-        return allRes.findIndex((el) => el?.id === item.id) === index
-      }
-    });
-
-    const results = cards.filter(card => {
-      const isCard = uniqItems.findIndex((el) => {
-        if (el?.cardId) {
-          return el.cardId === card.id
-        } else {
-          return el.id === card.id
+    const updatedListTitles = listTitles.map(title => {
+      if (title.id === targetListTitle.id) {
+        return {
+          ...title,
+          listId: listTitle.listId
         }
-      });
-      if (isCard > -1) return true;
-      return false;
+      }
+      if (title.id === listTitle.id) {
+        return {
+          ...title,
+          listId: target,
+        }
+      }
+      return { ...title }
     })
-    
-    return results;
-  },
+    return { listTitles: updatedListTitles }
+  }),
+
+  addSearchData: (data) => set({ searchData: data }),
   
   getTitle: (listId) => {
     const allTitles = get().listTitles
@@ -114,5 +109,51 @@ export const useTrelloStore = create((set, get) => ({
     const otherComments = state.comments.filter((comment) => comment.cardId !== cardId)
     comments.splice(index, 1, data);
     return { comments: [...otherComments, ...comments] }
-  })
+  }),
+
+  searchCards: (searchValue) => {
+    const regex = new RegExp(searchValue, 'i');
+    const cards = get().cards;
+    const tags = get().tags;
+    const comments = get().comments;
+
+    const resCards = cards.filter(card => regex.test(card.title));
+    const resTags = tags.filter(tag => regex.test(tag.title));
+    const resComments = comments.filter(comment => regex.test(comment.text));
+
+    // const resCardsId = resCards.map(card => card.id);
+    // const resTagsCardsId = resTags.map(tag => tag.cardId);
+    // const resCommentsCardsId = resComments.map(comment => comment.cardId);
+
+    // const allCardId = [...resCardsId, ...resTagsCardsId, ...resCommentsCardsId];
+
+    // const uniqItems = [...new Set(allCardId)]
+
+    // const results = cards.filter(card => uniqItems.includes(card.id))
+
+
+    const allRes = [...resCards, ...resTags, ...resComments];
+    
+    const uniqItems = allRes.filter((item, index) => {
+      if (item?.cardId) {
+        return allRes.findIndex((el) => el?.cardId === item.cardId) === index
+      } else {
+        return allRes.findIndex((el) => el?.id === item.id) === index
+      }
+    });
+
+    const results = cards.filter(card => {
+      const isCard = uniqItems.findIndex((el) => {
+        if (el?.cardId) {
+          return el.cardId === card.id
+        } else {
+          return el.id === card.id
+        }
+      });
+      if (isCard > -1) return true;
+      return false;
+    })
+    
+    return results;
+  },
 }))

@@ -4,13 +4,13 @@ import { trashIcon } from "../../../icons/trashIcon";
 import { useTrelloStore } from "../../../store/trelloStore";
 import "./styles.css";
 
-export const ListHeader = ({ listId ,title }) => {
+export const ListHeader = ({ listTitle }) => {
   const deleteList = useTrelloStore(state => state.deleteList);
 
   return (
     <div className="list-header">
-      <ListTitle title={title} />
-      <IconButton svg={trashIcon} variant={"delete"} onClick={() => deleteList(listId)} />
+      <ListTitle listTitle={listTitle} />
+      <IconButton svg={trashIcon} variant={"delete"} onClick={() => deleteList(listTitle?.listId)} />
     </div>
   )
 }

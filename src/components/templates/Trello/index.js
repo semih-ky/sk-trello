@@ -1,3 +1,5 @@
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 import { useTrelloStore } from '../../../store/trelloStore'
 import { Board } from '../../organisms/Board'
 import { Header } from '../../organisms/Header'
@@ -13,13 +15,15 @@ export const Trello = () => {
   return (
     <div className='main'>
       <Header />
-      <div className='content'>
-        {searchData ? (
-          <SearchResult results={searchData} />
-        ) : (
-          <Board />
-        )}
-      </div>
+      <DndProvider backend={HTML5Backend}>
+        <div className='content'>
+          {searchData ? (
+            <SearchResult results={searchData} />
+          ) : (
+            <Board />
+          )}
+        </div>
+      </DndProvider>
       <CardInfoModal isOpen={IsModalOpen} />
     </div>
   )

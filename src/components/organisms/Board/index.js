@@ -8,8 +8,8 @@ export const Board = () => {
 
   return (
     <div className='board'>
-      {lists.map(list => (
-        <List key={list?.id} list={list} />
+      {lists.map((list, index) => (
+        <List key={list?.id} list={list} order={index} />
       ))}
     </div>
   )

@@ -2,3 +2,7 @@
   font-size: var(--large-font);
   color: var(--white);
 }
+
+.list-title-drag-on {
+  opacity: 0.5;
+}

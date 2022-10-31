@@ -9,6 +9,15 @@
   min-width: 335px;
 }
 
+.list-container-drop-on {
+  opacity: 0.75;
+  background-color: var(--black-100);
+}
+
+.list-container-drag-on {
+  opacity: 0.50;
+}
+
 .list-container > h1 {
   margin-bottom: 16px;
 }

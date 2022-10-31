@@ -20,7 +20,6 @@ export const SearchInput = () => {
       return
     };
     const searchRes = searchCards(searchValue);
-    console.log("searchRes: ", searchRes)
     addSearchData(searchRes);
   }
 
