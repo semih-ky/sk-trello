@@ -9,6 +9,55 @@ export const useTrelloStore = create((set, get) => ({
   comments: initialState.comments,
   selectedCard: null,
   isModalOpen: false,
+  searchData: null,
+
+  addSearchData: (data) => set({ searchData: data }),
+
+  searchCards: (searchValue) => {
+    const regex = new RegExp(searchValue, 'i');
+    const cards = get().cards;
+    const tags = get().tags;
+    const comments = get().comments;
+
+    const resCards = cards.filter(card => regex.test(card.title));
+    const resTags = tags.filter(tag => regex.test(tag.title));
+    const resComments = comments.filter(comment => regex.test(comment.text));
+
+    // const resCardsId = resCards.map(card => card.id);
+    // const resTagsCardsId = resTags.map(tag => tag.cardId);
+    // const resCommentsCardsId = resComments.map(comment => comment.cardId);
+
+    // const allCardId = [...resCardsId, ...resTagsCardsId, ...resCommentsCardsId];
+
+    // const uniqItems = [...new Set(allCardId)]
+
+    // const results = cards.filter(card => uniqItems.includes(card.id))
+
+
+    const allRes = [...resCards, ...resTags, ...resComments];
+    
+    const uniqItems = allRes.filter((item, index) => {
+      if (item?.cardId) {
+        return allRes.findIndex((el) => el?.cardId === item.cardId) === index
+      } else {
+        return allRes.findIndex((el) => el?.id === item.id) === index
+      }
+    });
+
+    const results = cards.filter(card => {
+      const isCard = uniqItems.findIndex((el) => {
+        if (el?.cardId) {
+          return el.cardId === card.id
+        } else {
+          return el.id === card.id
+        }
+      });
+      if (isCard > -1) return true;
+      return false;
+    })
+    
+    return results;
+  },
   
   getTitle: (listId) => {
     const allTitles = get().listTitles
