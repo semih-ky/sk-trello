@@ -23,7 +23,7 @@ export const AddComment = ({ cardId }) => {
     <CommentContainer>
       <Avatar />
       <div className='add-comment-container'>
-        <div ref={commentEditable} contentEditable placeholder='Enter a comment.' className='add-comment-editable'></div>
+        <div data-testid={"commentInput"} ref={commentEditable} contentEditable placeholder='Enter a comment.' className='add-comment-editable'></div>
         <div className='add-comment-footer'>
           <Button onClick={addCommentHandler}>Add</Button>
         </div>
