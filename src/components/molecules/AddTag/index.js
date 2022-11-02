@@ -40,8 +40,8 @@ export const AddTag = ({ cardId }) => {
       <Button icon={<Icon svg={addIcon} />} onClick={() => toggleIsOpen(true)}>Add Tag</Button>
       {isOpen && (
         <div className='add-tag-input-wrapper'>
-          <input autoFocus type={"text"} value={value} onChange={changeHandler} />
-          <IconButton svg={checkIcon} onClick={addTagHandler} />
+          <input autoFocus title='Tag name' type={"text"} value={value} onChange={changeHandler} />
+          <IconButton ariaLabel='add-tag' svg={checkIcon} onClick={addTagHandler} />
           <IconButton svg={xmarkIcon} variant={"secondary"} onClick={cancelHandler} />
         </div>
       )}

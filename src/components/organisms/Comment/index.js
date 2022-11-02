@@ -51,7 +51,7 @@ export const Comment = ({ cardId, index, comment }) => {
           )}
           <IconButton svg={isEdit ? xmarkIcon : ellipsisIcon} variant={"secondary"} onClick={editToggleHandler} />
           {isEdit || (
-            <IconButton svg={trashIcon} variant={"delete"} onClick={() => deleteComment(comment?.id)} />
+            <IconButton ariaLabel='delete-comment' svg={trashIcon} variant={"delete"} onClick={() => deleteComment(comment?.id)} />
           )}
         </div>
       </div>

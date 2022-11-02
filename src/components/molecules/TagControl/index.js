@@ -44,7 +44,7 @@ export const TagControl = ({ cardId, tag, index }) => {
         )}
         <IconButton svg={isEdit ? xmarkIcon : ellipsisIcon} variant={"secondary"} onClick={toggleEdit} />
         {isEdit || (
-          <IconButton svg={trashIcon} variant={"secondary"} onClick={() => deleteTag(tag?.id)} />
+          <IconButton ariaLabel='delete-tag' svg={trashIcon} variant={"secondary"} onClick={() => deleteTag(tag?.id)} />
         )}
       </div>
     </Tag>
