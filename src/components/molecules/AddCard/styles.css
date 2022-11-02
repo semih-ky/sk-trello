@@ -1,0 +1,18 @@
+.add-card-contenteditable {
+  width: 100%;
+  min-height: 50px;
+  font-size: var(--md-font);
+  color: var(--black-500);
+  cursor: text;
+  outline: none;
+}
+
+.add-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.add-card-footer > button {
+  margin: 0 4px;
+}

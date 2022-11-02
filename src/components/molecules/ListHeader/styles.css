@@ -1,0 +1,16 @@
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.list-header span {
+  width: 14px;
+  height: 14px;
+}
+
+.list-header button {
+  width: 28px;
+  height: 28px;
+}

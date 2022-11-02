@@ -1,0 +1,17 @@
+.card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--blue);
+  border-radius: 10px;
+  min-height: 100px;
+  padding: 16px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card-drag-on {
+  opacity: 0.5;
+}

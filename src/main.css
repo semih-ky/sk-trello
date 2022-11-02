@@ -1,0 +1,65 @@
+:root {
+  font-size: 16px;
+  --modal-zIndex: 10;
+  --xlarge-font: 1.5rem;
+  --large-font: 1.25rem;
+  --md-font: 1rem;
+  --small-font: 0.75rem;
+  --xsmall-font: 0.50rem;
+  --blue: #A6D1E6;
+  --purple: #7F5283;
+  --purple-100: #a067a5;
+  --white: #FEFBF6;
+  --white-500: #bfbcb9;
+  --black: #3D3C42;
+  --black-100: #58575f;
+  --black-500: #212125;
+  --peach: #FF8080;
+  --peach-100: #fc9999;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-size: inherit;
+}
+
+input {
+  border: none;
+  font-size: var(--md-font);
+  width: 100%;
+  height: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  padding: 4px 8px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* 
+.card-size {
+  width: 300px;
+  height: 150px;
+} */

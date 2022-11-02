@@ -1,0 +1,60 @@
+.add-tag-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+}
+
+.add-tag-input-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.add-tag-wrapper > button {
+  width: max-content;
+}
+
+@keyframes heightAnimation {
+  from { 
+    height: 0;
+    padding: 0;
+  }
+  to { 
+    height: 44px; 
+    padding: 8px;
+
+  }
+}
+
+@keyframes opacityAnimation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.add-tag-input-wrapper {
+  margin-top: 8px;
+  border: 1px solid;
+  border-radius: 20px;
+  color: var(--black);
+  border-color: var(--black);
+  margin-left: 4px;
+  animation: heightAnimation 1s;
+  animation-fill-mode: forwards;
+}
+
+.add-tag-input-wrapper > input {
+  margin-left: 8px;
+}
+
+.add-tag-input-wrapper > button {
+  margin-left: 4px;
+  opacity: 0;
+  animation-name: opacityAnimation;
+  animation-duration: 1s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+.add-tag-input-wrapper span {
+  width: 18px;
+  height: 18px;
+}

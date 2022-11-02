@@ -1,0 +1,25 @@
+.tag-wrapper {
+  padding: 4px 8px; 
+  border: 1px solid var(--black-500);
+  max-width: max-content;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  color: var(--black-500);
+  position: relative;
+}
+
+.tag-red {
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.300);
+}
+
+.tag-blue {
+  border-color: blue;
+  background-color: rgba(0, 0, 255, 0.300);
+}
+
+.tag-green {
+  border-color: green;
+  background-color: rgba(0, 255, 0, 0.300);
+}
